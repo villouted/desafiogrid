@@ -1,0 +1,145 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/*definir áreas*/
+.navbar {
+  grid-area: header;
+  gap: 10px;
+  background-color: rgb(6, 6, 119);
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.asidebar {
+  grid-area: aside;
+  gap: 10px;
+  background-color: #c2c2c2b5;
+}
+
+.productos {
+  grid-area: productos;
+  gap: 10px;
+  background-color: #c2c2c2b5;
+}
+
+.pie {
+  grid-area: pie;
+  gap: 10px;
+  display: flex;
+ align-items: center;
+  justify-content: center;
+}
+
+/*diseño layout */
+.layout {
+  display: grid;
+  grid-template-columns: 180px auto;
+  grid-template-rows: 70px calc(100vh - 70px - 70px) 70px;
+  grid-template-areas:
+    "header header"
+    "aside productos"
+    "pie  pie";
+}
+
+.layout-item {
+  padding: 10px;
+}
+
+/*contenedor flex para grilla de productos*/
+.prod {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: left;
+  overflow: scroll;
+}
+
+.tarjeta{
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: calc(((100vh - 70px - 70px)/2) - 20px);
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.tarjeta img{
+  width: 100%;
+  height: 65%;
+  object-fit:fill ;
+  object-position: center center;
+  border-radius: 10px;
+}
+
+.tarjeta h6{
+  height: 10%;
+  margin: 0;
+}
+
+.tarjeta p{
+  height: 10%;
+  margin: 0 0 2px 0;
+  color: #434141b5;
+  font-size: 15px;
+  }
+
+.buy{
+  width: 100%;
+  height: 15%;
+  background-color: rgb(6, 6, 119);
+  border-radius: 10px;
+}
+
+.buy a{
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+
+/*asidebar*/
+.aside-container {
+  display: flex;
+  flex-direction: column;tarjeta img{
+    width: 100%;
+    height: 65%;
+    object-fit:fill ;
+    object-position: center center;
+    border-radius: 10px;
+  }
+  gap: 10px;
+  align-items: start;
+}
+
+li {
+  display: flex;
+  list-style: none;
+  gap: 5px;
+}
+
+.conteo {
+  color: #989292;
+}
+
+.cat > a {
+  text-decoration: none;
+  color: #000;
+}
+
+/*navbar*/
+.navbar h3{
+  color: #fff;
+  margin: 0;
+}
+
+/*pie*/
+.pie p{
+  margin: 0;
+}
